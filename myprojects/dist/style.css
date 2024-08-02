@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+:root {
+  --background-color: #9a6c3f;
+}
+
+.container{
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #74512D;
+}
+
+.container > p {
+  margin-left: 30px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #F8F4E1;
+}
+
+.container > .navbar > a{
+  margin-right: 30px;
+  text-decoration: none;
+  color: #F8F4E1;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.card-position-fixer{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  
+}
+
+.card-position-fixer > .card-container {
+  width: 200px;
+  height: 300px;
+  background-color: #F8F4E1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 15px 10px rgb(0, 0, 0, 0.15);
+}
+
+.card-position-fixer > .card-container > div > img {
+  width: 100%;
+}
+
+.card-position-fixer > .card-container > h3 {
+  font-family:'Times New Roman', Times, serif;
+  margin: 10px;
+}
+
+.card-position-fixer > .card-container > p {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 10px;
+}
+
+button{
+  padding: 7px 20px;
+  background-color: #543310;
+  color: white;
+  border: none;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-color);
+  z-index: -1;
+
+  transition: transform 300ms ease-in-out;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.btn:hover::before,
+.btn:focus::before {
+  transform: scale(1);
+}
+
+.btn{
+  z-index: 1;
+}
+
+.next-project{
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  border: none;
+  color: white;
+  background-color: #F5004F;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: 0.3s ease;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.next-project:hover{
+  background-color: hsl(341, 100%, 60%);
+  scale: 0.9;
+}
+.next-project:active{
+  background-color: hsl(341, 100%, 40%);
+  scale: 1;
+}

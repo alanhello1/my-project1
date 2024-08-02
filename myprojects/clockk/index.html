@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="bebillionare">
+        <div class="container">
+            <div class="clock">
+                <span id="hours">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+            <button class="next-project" onclick="nextProject()">next project</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+
+let hours = document.getElementById("hours");
+let min = document.getElementById("min");
+let sec = document.getElementById("sec");
+
+setInterval(()=>{
+let currentTime = new Date();
+
+hours.innerHTML = (currentTime.getHours()<10?"0":"") + currentTime.getHours();
+min.innerHTML = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes();
+sec.innerHTML = (currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds();
+
+},1000)
+
+    </script>
+
+</body>
+</html>

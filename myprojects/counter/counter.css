@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFFBDA;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+    border: none;
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-family: serif;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.decrease{
+background-color: rgb(3, 150, 255);
+}
+.decrease:hover{
+    background-color: hsl(205, 100%, 70%);
+}
+.decrease:hover{
+    background-color: hsl(205, 100%, 40%);
+}
+.increase{
+background-color: rgb(36, 232, 36);
+}
+.increase:hover{
+    background-color: hsl(120, 81%, 70%);
+}
+.increase:active{
+    background-color: hsl(120, 81%, 40%);
+}
+.reset{
+background-color: rgb(250, 69, 69);
+}
+.reset:hover{
+    background-color: hsl(0, 95%, 70%);
+}
+.reset:active{
+    background-color: hsl(0, 95%, 40%);
+}
+
+#display{
+    font-size: 5rem;
+}
+
+.next-project{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    border: none;
+    color: white;
+    background-color: #F5004F;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.3s ease;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+.next-project:hover{
+    background-color: hsl(341, 100%, 60%);
+    scale: 0.9;
+}
+.next-project:active{
+    background-color: hsl(341, 100%, 40%);
+    scale: 1;
+}

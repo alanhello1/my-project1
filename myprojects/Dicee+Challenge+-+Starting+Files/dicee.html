@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="" />
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="" />
+      </div>
+
+
+    </div>
+    <div class="image">
+      <img id="dice1" src="" alt="">
+      <img id="dice2" src="" alt="">
+
+      <button onclick="displayrandomimage(), displayrandomimage1()">roll the dice</button>
+
+    </div>
+
+
+    <footer>www 🎲 App Brewery 🎲 com</footer>
+
+    <script>
+      const image = [
+       'images/dice1.png',
+       'images/dice2.png',
+       'images/dice3.png',
+       'images/dice4.png',
+       'images/dice5.png',
+       'images/dice6.png',
+      ]
+
+      function displayrandomimage(){
+        const randomImage = Math.floor(Math.random() * 6);
+        document.getElementById("dice1").src = image[randomImage];
+      }
+      function displayrandomimage1(){
+        const randomImage = Math.floor(Math.random() * 6);
+        document.getElementById("dice2").src = image[randomImage];
+      }
+
+    </script>
+    
+  </body>
+</html>

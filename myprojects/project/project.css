@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 270px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+} 
+
+
+.card-image {
+    background-color: aqua;
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.car-1 {background-image: url(img/ferrari.jpg)}
+.car-2 {background-image: url(img/ferrarii.webp)}
+.car-3 {background-image: url(img/ferrariii.jpg)}
+
+
+.card h2, .card p {
+    padding: 10px;
+}
+
+.card a {
+    background-color: black;
+    color: white;
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    margin: 20px 50px;
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: rgb(91, 91, 91);
+    transform: scale(1.03);
+}
+
+.card::after {
+    transform: scale(1);
+}
+
+.next-project{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    border: none;
+    color: white;
+    background-color: #F5004F;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 5rem;
+    transition: 0.3s ease;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+.next-project:hover{
+    background-color: hsl(341, 100%, 60%);
+}
+.next-project:active{
+    background-color: hsl(341, 100%, 40%);
+    scale: 1;
+}
